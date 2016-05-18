@@ -1,0 +1,65 @@
+
+* { -webkit-tap-highlight-color: rgba(0,0,0,0);}
+
+html, body { height:100%; margin:0px; padding:0px; width:100%;}
+body { display: flex; -webkit-flex-direction: column; -webkit-display: flex; flex-direction-column;
+        background: url(../img/back.png); -webkit-background-size: auto auto; background-size:auto auto;
+        font-family: 'Inconsolata'; font-size:12px;}
+
+.event { border-radius:4px; -webkit-border-radius:4px; margin:0px 30px; padding:2px 0px;color:#FFFFFF; font-size:12px;}
+.event.listening { background-color:#333333; display:block;}
+.event.received { background-color:#4B946A; display:none;}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+.blink { animation:fade 3000ms infinite; -webkit-animation:fade 3000ms infinite;}
+
+
+header { display: flex; position: relative; top: 0px; height: 10%; width: 100%; padding: 2vh 0 2vh 0;
+            background-color: #22202B; }
+    header > h1 { display: flex; justify-content: center; flex: 4; margin: 0px; padding: 0px; font-size: 7vh;
+                        font-variant: small-caps; overflow: visible; color: rgba(255, 255, 255, 0.8);}
+        header > img { display: flex; flex:1; height: 5vh; width: 5vh; padding-top: 1vh;}
+
+.content { display: flex; flex-direction: column; justify-content: center; align-items: center;
+            height: 90%; width: 100%; position: absolute; margin: auto; top: 10%; }
+    #container { display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 70%; height: 80%;}
+
+        .cards { display: flex; flex-direction: column; height: 70%; width: 100%; justify-content: center; align-items: center;
+                    font-variant: small-caps;}
+        .cards img { height: 80%; width:100%; border-radius: 50%; box-shadow: 10px 10px 5px #888888;}
+                .name { height: 15%; width:100%; text-align: center; font-size: 5vh;}
+                #buttons { display: flex; height: 15%; width:100%; }
+                     #love_but, #reject_but { display: flex; justify-content: center; height: 100%;width: 50%;}
+                    #love, #reject { display: flex; width: 60%; height: 60%; justify-content: center; align-items: center; border-radius: 2vh;}
+                    #love {background-color: rgba(26, 188, 156,0.8);}
+                    #reject {background-color:#FC575E}
+                    #love img, #reject img{ display: flex; height: 60%;width: 60%; }
+
+.load {
+    display: flex;
+    position: absolute;
+    height: 90%; width: 100%; position: absolute; margin: auto; top: 10%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.loading {
+    background-color: black;
+}
+.hidden {
+visibility: hidden
+}
+@media screen and (min-width: 600px) and (max-width: 2000px) {
+         .love img, .reject img{ display: flex; height: 10%;width: 10%; }
+
+  }
+}
+
+
